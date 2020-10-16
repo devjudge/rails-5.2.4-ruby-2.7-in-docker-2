@@ -1,5 +1,5 @@
 # cj-app
-Ruby 2.4 Rails 5.2.3
+Ruby 2.7 Rails 5.2.4
 
 IMPORTANT NOTES:
 
