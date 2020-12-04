@@ -15,7 +15,7 @@ RUN sh db-setup.sh
 
 RUN mkdir /myapp
 WORKDIR /myapp
-COPY Gemfile /myapp/Gemfile
+COPY Gemfile Gemfile.lock* /myapp/
 RUN bundle install
 COPY . /myapp
 
