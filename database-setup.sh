@@ -1,11 +1,9 @@
+#!/bin/bash
 sudo apt-get update
 
 sudo apt-get install --assume-yes gnupg apt-utils gnupg2 curl gcc
 
 sudo apt-get update
-
-rvm install ruby-2.7.2
-rvm use ruby-2.7.2 --default
 
 sudo apt-get install --assume-yes mysql-server-8.0
 
@@ -46,3 +44,8 @@ ps aux | grep mongo
 sleep 5
 wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/backend-project/database/mongo-database.js
 mongo < mongo-database.js
+
+. "$HOME/.rvm/scripts/rvm"
+rvm install ruby-2.7.2
+echo 'export PATH=$PATH:$HOME/.rvm/rubies/ruby-2.7.2/bin/' >> $HOME/.bashrc
+exec bash
